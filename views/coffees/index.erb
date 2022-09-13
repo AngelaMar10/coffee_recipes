@@ -1,1 +1,34 @@
 <h1>Coffee Recipes</h1>
+<a href="/users/new">Sign Up</a>
+<a href="/coffees/new">Add a coffee recipe</a>
+
+<section class="coffees">
+  <% coffees.each do |coffee| %>
+    <section class="coffee">
+      <header>
+        <h2><%= coffee['name'] %></h2>
+
+        <section class="controls">
+        <a href="/coffees/<%= coffee['id'] %>/edit">Edit</a>
+
+        <form action="/coffees/<%= coffee['id'] %>" method="POST">
+        <input type="hidden" name="_method" value="delete">
+        <button>Delete</button>
+        </form>
+        </section>
+      </header>
+
+      <img src="<%= coffee['image_url'] %>" alt="">
+      <span>
+      <p>
+        <h3>Coffee shoots: <%= coffee['coffee_shots'] %></h3>
+        <h3>Ingredients: <%= coffee['ingredients'] %></h3>
+        <h3>Servings: <%= coffee['servings'] %></h3>
+        <h3>Serves hot y/n: <%= coffee['hot_drink'] %></h3>
+        <h3>Dairy free y/n: <%= coffee['dairy_free'] %></h3>
+        <h3>Preparation: <%= coffee['steps'] %></h3>
+      </p>
+      </span>
+    </section>
+  <% end %>
+</section>

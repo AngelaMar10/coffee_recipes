@@ -1,0 +1,32 @@
+<h1>Edit coffees</h1>
+
+<form action="/coffees/<%= coffee['id'] %>" method="POST">
+    <input type="hidden" name="_method" value="put">
+
+    <label for="">Name: </label>
+    <input type="text" name="name" value="<%= coffee['name']%>">
+
+    <label for="">Image URL: </label>
+    <input type="text" name="image_url" value="<%= coffee['image_url']%>">
+
+    <label for="">Coffee shoots: </label>
+    <input type="text" name="coffee_shots" value="<%= coffee['coffee_shots']%>">
+
+    <label for="">Ingredients: </label>
+    <input type="text" name="ingredients" value="<%= coffee['ingredients']%>">
+
+    <label for="">Servings: </label>
+    <input type="text" name="servings" value="<%= coffee['servings']%>">
+
+    <label for="">Serves hot y/n: </label>
+    <input type="text" name="hot_drink" value="<%= coffee['hot_drink']%>">
+
+    <label for="">Dairy free y/n: </label>
+    <input type="text" name="dairy_free" value="<%= coffee['dairy_free']%>">
+
+    <label for="">Preparation: </label>
+    <input type="text" name="steps" value="<%= coffee['steps']%>">
+
+    <button>Update coffee</button>
+
+</form>
