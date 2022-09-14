@@ -1,32 +1,36 @@
 <h1>Edit coffees</h1>
 
 <form action="/coffees/<%= coffee['id'] %>" method="POST">
-    <input type="hidden" name="_method" value="put">
+<div class='edit-coffee'>
+    <input type="hidden" name="_method" value="put"><br>
 
     <label for="">Name: </label>
-    <input type="text" name="name" value="<%= coffee['name']%>">
+    <input type="text" name="name" value="<%= coffee['name']%>"><br>
 
     <label for="">Image URL: </label>
-    <input type="text" name="image_url" value="<%= coffee['image_url']%>">
+    <input type="text" name="image_url" value="<%= coffee['image_url']%>"><br>
 
     <label for="">Coffee shoots: </label>
-    <input type="text" name="coffee_shots" value="<%= coffee['coffee_shots']%>">
+    <input type="text" name="coffee_shots" value="<%= coffee['coffee_shots']%>"><br>
 
     <label for="">Ingredients: </label>
-    <input type="text" name="ingredients" value="<%= coffee['ingredients']%>">
+    <input type="text" name="ingredients" value="<%= coffee['ingredients']%>"><br>
 
     <label for="">Servings: </label>
-    <input type="text" name="servings" value="<%= coffee['servings']%>">
+    <input type="text" name="servings" value="<%= coffee['servings']%>"><br>
 
     <label for="">Serves hot y/n: </label>
-    <input type="text" name="hot_drink" value="<%= coffee['hot_drink']%>">
+    <input type="text" name="hot_drink" value="<%= coffee['hot_drink']%>"><br>
 
     <label for="">Dairy free y/n: </label>
-    <input type="text" name="dairy_free" value="<%= coffee['dairy_free']%>">
+    <input type="text" name="dairy_free" value="<%= coffee['dairy_free']%>"><br>
 
     <label for="">Preparation: </label>
-    <input type="text" name="steps" value="<%= coffee['steps']%>">
+    <input type="text" name="steps" value="<%= coffee['steps']%>"><br>
 
-    <button>Update coffee</button>
+    <button class='update-coffee-btn'>Update coffee</button>
+</div>
+
+
 
 </form>

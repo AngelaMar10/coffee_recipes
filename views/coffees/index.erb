@@ -1,7 +1,7 @@
 <h1 class='center'>offee Recipe</h1>
 
 <% if logged_in? %>
-  <h2>Welcome to Coffee Recipes <%= current_user['first_name'] %></h2>
+  <h2 class='welcome'>Welcome to Coffee Recipes <%= current_user['first_name'] %></h2>
 
   <section class="controls">
       <form action="/sessions" method="POST">
@@ -30,9 +30,9 @@
 
         <img src="<%= coffee['image_url'] %>" alt="">
         <span>
-        <p>
+        <p class ="coffee-info">
           
-          <div class ="coffe-info">
+          <div>
             <h3>Coffee shoots: <%= coffee['coffee_shots'] %></h3>
             <h3>Ingredients: <%= coffee['ingredients'] %></h3>
             <h3>Servings: <%= coffee['servings'] %></h3>
