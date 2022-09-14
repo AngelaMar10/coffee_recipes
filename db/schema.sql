@@ -19,3 +19,13 @@ VALUES('Cinnamon Coffe', 'https://images.unsplash.com/photo-1494314671902-399b18
 INSERT INTO coffees (name, image_url, coffee_shots, ingredients, servings, hot_drink, dairy_free, steps)
 VALUES('Ice-cream Frozen Coffe', 'https://images.unsplash.com/photo-1606913170721-12f535425f59?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80', 2, '100ml of milk, 1 tsps of coconut syrup, 1 scoop of Vanilla ice-cream ', 2, 'No', 'No', 'Blend the coffee shoots, milk, and coconut syrup until smooth, pour into serving glass and add the scoop of ice-cream on the top, add chocolate syrup for extra sweetness');
 
+CREATE TABLE users(
+    id SERIAL PRIMARY KEY,
+    first_name TEXT,
+    last_name TEXT,
+    email TEXT
+);
+
+ALTER TABLE users ADD COLUMN password_digest TEXT;
+
+ALTER TABLE coffees ADD COLUMN owner TEXT;

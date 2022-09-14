@@ -1,25 +1,32 @@
-  <h1 class='center'>Coffee Recipes</h1>
+<h1 class='center'>Coffee Recipes</h1>
 
-  <a href="/users/new">Sign Up</a>
-  <a href="/coffees/new">Add a coffee recipe</a>
+<% if logged_in? %>
+  <h2>Welcome to Coffee Recipes <%= current_user['first_name'] %></h2>
 
-<section class="coffees">
-  <% coffees.each do |coffee| %>
-    <section class="coffee">
-      <header>
-        <h2><%= coffee['name'] %></h2>
+  <section class="controls">
+      <form action="/sessions" method="POST">
+        <input type="hidden" name="_method" value="delete">
+        <button>Logout</button>
+      </form>
+
+      <a href="/coffees/new">Add a coffee recipe</a>
+  </section>
+
+  <section class="coffees">
+    <% coffees.each do |coffee| %>
+      <section class="coffee">
+        <header>
+          <h2><%= coffee['name'] %></h2>
 
         <section class="controls">
-        <a href="/coffees/<%= coffee['id'] %>/edit">Edit</a>
+          <a href="/coffees/<%= coffee['id'] %>/edit">Edit</a>
 
-        <form action="/coffees/<%= coffee['id'] %>" method="POST">
-        <input type="hidden" name="_method" value="delete">
-        <button>Delete</button>
-        </form>
+          <form action="/coffees/<%= coffee['id'] %>" method="POST">
+            <input type="hidden" name="_method" value="delete">
+            <button>Delete</button>
+          </form>
         </section>
       </header>
-
-      
 
       <img src="<%= coffee['image_url'] %>" alt="">
       <span>
@@ -37,4 +44,9 @@
       </span>
     </section>
   <% end %>
-</section>
+  </section>
+
+<% else %>
+  <a href="/users/new">Sign Up</a>
+  <a href="/sessions/new">Login</a>
+<% end %>

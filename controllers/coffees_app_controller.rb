@@ -1,10 +1,13 @@
 require './models/coffee_app'
 
 get '/' do
-    coffees = all_coffees()
+    # coffees = all_coffees()
+    owner_id = session['user_id']
+    logged_coffees = coffee_owner(owner_id)
 
     erb :'coffees/index', locals: {
-    coffees: coffees
+    # coffees: coffees
+        coffees: logged_coffees
     }
 end
 
@@ -21,8 +24,9 @@ post '/coffees' do
     hot_drink = params['hot_drink']
     dairy_free = params['dairy_free']
     steps = params['steps']
+    owner_id = session['user_id']
     
-    create_coffee(name, image_url, coffee_shots, ingredients, servings, hot_drink, dairy_free, steps)
+    create_coffee(name, image_url, coffee_shots, ingredients, servings, hot_drink, dairy_free, steps, owner_id)
 
     redirect '/'
 end
