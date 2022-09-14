@@ -47,8 +47,8 @@ put '/coffees/:id' do
     dairy_free = params['dairy_free']
     steps = params['steps']
 
-  update_coffee(id,name, image_url, coffee_shots, ingredients, servings, hot_drink, dairy_free, steps)
-  redirect '/'
+    update_coffee(id,name, image_url, coffee_shots, ingredients, servings, hot_drink, dairy_free, steps)
+    redirect '/'
 end
 
 delete '/coffees/:id' do

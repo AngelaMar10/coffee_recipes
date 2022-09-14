@@ -1,6 +1,7 @@
-<h1>Coffee Recipes</h1>
-<a href="/users/new">Sign Up</a>
-<a href="/coffees/new">Add a coffee recipe</a>
+  <h1 class='center'>Coffee Recipes</h1>
+
+  <a href="/users/new">Sign Up</a>
+  <a href="/coffees/new">Add a coffee recipe</a>
 
 <section class="coffees">
   <% coffees.each do |coffee| %>
@@ -23,7 +24,7 @@
       <img src="<%= coffee['image_url'] %>" alt="">
       <span>
       <p>
-        <div class="background-elipse"></div>
+        <%# <div class="background-elipse"></div> %>
         <div class ="coffe-info">
           <h3>Coffee shoots: <%= coffee['coffee_shots'] %></h3>
           <h3>Ingredients: <%= coffee['ingredients'] %></h3>
