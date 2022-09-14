@@ -111,19 +111,49 @@ h3 {
 }
 
 .home-page {
-    font-size: 2rem;
+    font-family: 'Bebas Neue', cursive;
+    color: rgb(255, 223, 204);
+    font-size: 3rem;
+    /* font-style: italic; */
     text-align: center;
+    align-items: center;
+    justify-content: center;
     max-width: 40%;
     position: relative;
-    top: 50%;
+    top: 70%;
     left: 50%;
     transform: translate(-50% , -50%);
-    /* height: 100%;
-    width: 70%; */
-    background-color: rgba(48, 93, 103, 0.913);
-    border-radius: 30% 0 30% 0;
-    /* display: inline-block; */
+    height: 100%
     
+    
+}
+
+h4 {
+    color:rgb(230, 123, 61);
+    font-family: 'Bebas Neue', cursive;
+    animation: typing 3s steps(16);
+    font-style: none;
+
+}
+
+h4::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color:rgb(19, 56, 62);
+    border-left: 0px solid rgb(230, 123, 61);
+    animation: typing 4s steps(16) infinite;
+}
+@keyframes typing {
+    40%,
+    60% {
+        left: calc(100% + 30px);
+    }
+    100% {
+        left: 0;
+    }
 }
 
 label {

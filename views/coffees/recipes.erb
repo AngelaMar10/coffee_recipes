@@ -6,24 +6,23 @@
   <section class="/coffees">
     <% coffees.each do |coffee| %>
       <section class="coffee">
-        <header>
-          <h2><%= coffee['name'] %></h2>
-        </header>
+          <header>
+            <h2><%= coffee['name'] %></h2>
+          </header>
 
-        <img src="<%= coffee['image_url'] %>" alt="">
-        
-        <p class ="coffee-info">
+          <img src="<%= coffee['image_url'] %>" alt="">
           
-          <div>
-            <h3>Coffee shoots: <%= coffee['coffee_shots'] %></h3>
-            <h3>Ingredients: <%= coffee['ingredients'] %></h3>
-            <h3>Servings: <%= coffee['servings'] %></h3>
-            <h3>Serves hot y/n: <%= coffee['hot_drink'] %></h3>
-            <h3>Dairy free y/n: <%= coffee['dairy_free'] %></h3>
-            <h3>Preparation: <%= coffee['steps'] %></h3>
-          </div>
-        </p>
-        
+          <p class ="coffee-info">
+            
+            <div>
+              <h3>Coffee shoots: <%= coffee['coffee_shots'] %></h3>
+              <h3>Ingredients: <%= coffee['ingredients'] %></h3>
+              <h3>Servings: <%= coffee['servings'] %></h3>
+              <h3>Serves hot y/n: <%= coffee['hot_drink'] %></h3>
+              <h3>Dairy free y/n: <%= coffee['dairy_free'] %></h3>
+              <h3>Preparation: <%= coffee['steps'] %></h3>
+            </div>
+          </p>
       </section>
     <% end %>
   <section>
