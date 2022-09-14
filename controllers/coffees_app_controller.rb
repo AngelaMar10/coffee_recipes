@@ -1,12 +1,12 @@
 require './models/coffee_app'
 
-# get '/recipes' do
-#     coffees = all_coffees()
+get '/coffees/recipes' do
+    coffees = all_coffees()
 
-#     erb :'coffees/recipes', locals: {
-#         coffees: coffees
-#     }
-# end
+    erb :'coffees/recipes', locals: {
+        coffees: coffees
+    }
+end
 
 get '/' do
     # coffees = all_coffees()
